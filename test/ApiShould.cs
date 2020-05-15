@@ -11,7 +11,7 @@ namespace TemplateName.Test
         [Fact]
         public async void Not_Throw()
         {
-            HttpResponseMessage response = await client.GetAsync("/");
+            HttpResponseMessage response = await client.GetAsync("/hello");
             response.EnsureSuccessStatusCode();
             var content = await response.Content.ReadAsStringAsync();
             Assert.Equal("hello world", content);

@@ -35,19 +35,22 @@ namespace TemplateName.Sample
 
             app.UseMvc();
 
-            //app.UseSpa(spa =>
-            //{
-            //    spa.Options.SourcePath = "web";
-
-            //    if (env.IsDevelopment())
-            //    {
-            //        spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
-            //    }
-            //});
-
-            app.Run(async (context) =>
+            app.Map("/hello", app =>
             {
-                await context.Response.WriteAsync("hello world");
+                app.Run(async (context) =>
+                {
+                    await context.Response.WriteAsync("hello world");
+                });
+            });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "web";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
+                }
             });
         }
     }
