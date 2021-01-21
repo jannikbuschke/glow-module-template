@@ -48,7 +48,7 @@
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
     "prettier": "2.0.5",
-    "immer": "2.1.5",
+    "immer": "8.0.1",
     "lodash": "4.17.15",
     "@types/lodash": "4.14.141",
     "@babel/core": "7.8.4",
