@@ -49,7 +49,7 @@
     "@types/react-dom": "16.9.8",
     "prettier": "2.0.5",
     "immer": "2.1.5",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "@types/lodash": "4.14.141",
     "@babel/core": "7.8.4",
     "@storybook/addon-actions": "5.3.13",
